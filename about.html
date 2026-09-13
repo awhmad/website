@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>about</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html">home</a>
+    <a href="about.html" aria-current="page">about</a>
+    <a href="projects.html">projects</a>
+    <a href="blog.html">blog</a>
+    <a href="contact.html">contact</a>
+  </nav>
+
+  <main class="page">
+    <h1>About</h1>
+    <p>
+      Hello! I'm Ahmad Alrifai, and you are <span id="visitor-ip">…</span>. Nice to meet you! add more here
+    </p>
+
+    <section>
+      <h2>Education</h2>
+      <p>High school senior, class of 2027 — planning on majoring in Computer Engineering in university with a business related minor.</p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul class="dotted-list">
+        <li>examples</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Hobbies</h2>
+      <ul class="dotted-list">
+        <li>examples</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>© 2026 ahmad alrifai</footer>
+
+  <script>
+    fetch('https://api.ipify.org?format=json')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('visitor-ip').textContent = data.ip;
+      })
+      .catch(() => {
+        document.getElementById('visitor-ip').textContent = 'a mystery to me';
+      });
+  </script>
+
+</body>
+</html>
